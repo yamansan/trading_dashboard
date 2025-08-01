@@ -1,0 +1,125 @@
+
+<html>
+<head>
+    <title>Predicted Risk vs Price</title>
+    <meta http-equiv="refresh" content="5">
+    <style>
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .timestamp {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Risk vs Price</h2>
+    <div style="text-align: center; background-color: #e6f3ff; padding: 10px; margin: 20px auto; width: 70%; border-radius: 5px; font-weight: bold; font-size: 18px;">
+        PnL Settlement: $0.00
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Price</th>
+                <th>Delta Units</th>
+                <th>Total Units</th>
+                <th>DV01</th>
+                <th>PnL_Trade</th>
+                <th>PnL Breakeven</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>110'29+</td><td>0</td><td>5</td><td>312.5</td><td>-781.2</td><td>-2.5</td></tr>
+            <tr><td>110'26</td><td>0</td><td>5</td><td>312.5</td><td>-1328.1</td><td>-4.2</td></tr>
+            <tr><td>110'24</td><td>1</td><td>6</td><td>375.0</td><td>-1640.6</td><td>-4.4</td></tr>
+            <tr><td>110'20</td><td>4</td><td>10</td><td>625.0</td><td>-2390.6</td><td>-3.8</td></tr>
+            <tr><td>110'15</td><td>6</td><td>16</td><td>1000.0</td><td>-3953.1</td><td>-4.0</td></tr>
+
+        </tbody>
+    </table>
+    
+    <div style="display: flex; justify-content: space-between; margin: 20px auto; width: 70%;">
+        <div style="flex: 1; margin-right: 10px;">
+            <h2 style="text-align: center;">Scenario Ladder Analysis</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Price (ZN Format)</th>
+                        <th>PnL</th>
+                        <th>Breakeven (bps)</th>
+                    </tr>
+                </thead>
+                <tbody>
+            <tr><td>110'30</td><td>$-812.50</td><td>-2.17</td></tr>
+            <tr><td>110'30+</td><td>$-718.75</td><td>-1.92</td></tr>
+            <tr><td>110'31</td><td>$-625.00</td><td>-1.67</td></tr>
+            <tr><td>110'31+</td><td>$-531.25</td><td>-1.42</td></tr>
+            <tr><td>111'00</td><td>$-437.50</td><td>-1.17</td></tr>
+            <tr><td>111'00+</td><td>$-343.75</td><td>-0.92</td></tr>
+            <tr><td>111'01</td><td>$-250.00</td><td>-0.67</td></tr>
+            <tr><td>111'01+</td><td>$-156.25</td><td>-0.42</td></tr>
+            <tr><td>111'02</td><td>$-62.50</td><td>-0.17</td></tr>
+            <tr><td>111'02+</td><td>$31.25</td><td>0.08</td></tr>
+
+        </tbody>
+    </table>
+        </div>
+        
+        <div style="flex: 1; margin-left: 10px; margin-right: 10px;">
+            <h2 style="text-align: center;">LIFO Stack</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Price</th>
+                        <th>Lots</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>110'29</td><td>1.0</td></tr>
+                    <tr><td>111'00+</td><td>1.0</td></tr>
+                    <tr><td>111'02</td><td>1.0</td></tr>
+                    <tr><td>111'03</td><td>1.0</td></tr>
+                    <tr><td>111'05</td><td>1.0</td></tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="flex: 1; margin-left: 10px;">
+            <h2 style="text-align: center;">Most Recent LIFOs Acquired</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lots Bought/Sold</th>
+                        <th>Price</th>
+                        <th>Lifo PnL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>-1.0</td><td>111'00</td><td>$15.62</td></tr>
+                    <tr><td>-1.0</td><td>110'30+</td><td>$-31.25</td></tr>
+                    <tr><td>-1.0</td><td>111'00</td><td>$31.25</td></tr>
+                    <tr><td>-1.0</td><td>110'31+</td><td>$15.62</td></tr>
+                    <tr><td>-1.0</td><td>110'31+</td><td>$31.25</td></tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="timestamp">Last updated: 2025-07-31 22:02:38</div>
+</body>
+</html>
